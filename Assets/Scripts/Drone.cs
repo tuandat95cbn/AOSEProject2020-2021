@@ -165,13 +165,13 @@ public class Drone : Agent
                         landingZone = landingAreasSouth[0];
                         break;
                     case "south":
-                        landingZone = landingAreasNorth[1];
+                        landingZone = landingAreasSouth[1];
                         break;
                     case "east":
-                        landingZone = landingAreasNorth[2];
+                        landingZone = landingAreasSouth[2];
                         break;
                     case "west":
-                        landingZone = landingAreasNorth[3];
+                        landingZone = landingAreasSouth[3];
                         break;
                 }
                 break;
