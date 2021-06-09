@@ -1045,8 +1045,10 @@ namespace Prolog
 
         private static IEnumerable<CutState> NotImplementation(object[] args, PrologContext context)
         {
+            Debug.Log(args);
             if (args.Length != 1) throw new ArgumentCountException("not", args, "goal");
             LogicVariable v = Term.FindUninstantiatedVariable(args[0]);
+            Debug.Log(v);
             if (v != null)
                 throw new InstantiationException(v,
                     "Argument to not must be a ground literal (i.e. contain no unbound variables).");

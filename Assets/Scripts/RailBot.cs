@@ -13,8 +13,9 @@ public class RailBot : Agent
     GameObject exchangeArea;
     [SerializeField]
     GameObject[] landingAreas;
-    [SerializeField]
-    GameObject sortingBot;
+    //[SerializeField]
+    //GameObject sortingBot;
+    private GameObject[] sortingBots;
     [SerializeField]
     GameObject chargingStation;
 
@@ -28,6 +29,7 @@ public class RailBot : Agent
         Init(kbPath, kbPath);
 
         drones = GameObject.FindGameObjectsWithTag("Drone");
+        sortingBots = GameObject.FindGameObjectsWithTag("SortingBot");
     }
 
     public IEnumerator Goto(GameObject go)
@@ -104,7 +106,8 @@ public class RailBot : Agent
 
     public GameObject GetSortingBot()
     {
-        return sortingBot;
+        //return sortingBot;
+        return sortingBots[Random.Range(0, sortingBots.Length)];
     }
 
     public GameObject GetDrone()

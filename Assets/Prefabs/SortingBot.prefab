@@ -26,11 +26,11 @@ GameObject:
   - component: {fileID: 114900937245007850}
   m_Layer: 0
   m_Name: SortingBot
-  m_TagString: Untagged
+  m_TagString: SortingBot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4266812192993666
 Transform:
   m_ObjectHideFlags: 1
@@ -110,7 +110,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kbPath: KBs/SortingBot
   kbName: SortingBot
-  destination: {fileID: 0}
+  exchangeAreas: []
+  exchangeBots: []
+  chargingStation: {fileID: 0}
 --- !u!195 &195924756316194478
 NavMeshAgent:
   m_ObjectHideFlags: 1

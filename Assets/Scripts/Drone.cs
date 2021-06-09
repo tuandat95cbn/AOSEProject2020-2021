@@ -135,7 +135,7 @@ public class Drone : Agent
     public GameObject GetLandingZone(object startingArea, object destinationArea)
     {
         GameObject landingZone;
-
+        Debug.Log("starting Area " + startingArea.ToString() + ". DestinationArea " + destinationArea.ToString() );
         switch (startingArea.ToString())
         {
             default:

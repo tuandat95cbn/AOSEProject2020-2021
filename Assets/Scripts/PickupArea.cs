@@ -9,6 +9,7 @@ public class PickupArea : Agent
 
     private GameObject[] drones;
 
+
     enum Area { NORTH, SOUTH, EAST, WEST }
 
     [SerializeField] Area area;
@@ -30,7 +31,10 @@ public class PickupArea : Agent
     {
         return drones[Random.Range(0, drones.Length)];
     }
-
+    public GameObject getManager(){
+        GameObject gameManager = GameObject.Find("GameManager");
+        return gameManager;
+    }
     public void Destroy(GameObject g)
     {
         if (g.GetComponent<Box>().destination == this.gameObject)
